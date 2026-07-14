@@ -29,44 +29,42 @@ body {
   padding: 48px 28px 72px;
 }
 
+/* Homepage header and profile */
+
 .site-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 36px;
-  align-items: start;
-  margin-bottom: 40px;
+  margin-bottom: 52px;
 }
 
 .site-header h1 {
-  margin: 0;
+  margin: 0 0 24px;
   font-size: 2.25rem;
   line-height: 1.15;
   font-weight: 600;
 }
 
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 36px;
+  align-items: start;
+}
+
+.profile-text {
+  max-width: 620px;
+}
+
+.profile-text p:last-child {
+  margin-bottom: 0;
+}
+
 .headshot {
+  display: block;
   width: 180px;
   height: auto;
-  display: block;
   margin: 0;
 }
 
-.subtitle {
-  margin: 8px 0 18px;
-  color: var(--muted);
-}
-
-.intro {
-  display: block;
-  max-width: 650px;
-  margin-bottom: 52px;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 22px;
-}
+/* Links */
 
 a {
   color: var(--link);
@@ -77,6 +75,8 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
+
+/* Headings */
 
 h2 {
   margin: 52px 0 24px;
@@ -92,17 +92,26 @@ h3 {
   line-height: 1.4;
 }
 
+/* General text */
+
 p {
   margin: 0 0 15px;
 }
+
+.small {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* Research and course entries */
 
 .paper {
   margin-bottom: 30px;
 }
 
 .paper-meta {
-  color: var(--muted);
   margin-bottom: 7px;
+  color: var(--muted);
 }
 
 .paper-meta a {
@@ -117,26 +126,20 @@ p {
   margin-right: 14px;
 }
 
-.small {
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
-footer {
-  margin-top: 60px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.86rem;
-}
+/* Teaching and advising pages */
 
 .page-header {
   margin-bottom: 42px;
 }
 
 .page-header h1 {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  font-weight: 600;
 }
+
+/* Lists */
 
 ul,
 ol {
@@ -147,25 +150,28 @@ li {
   margin-bottom: 8px;
 }
 
+/* Small screens */
+
 @media (max-width: 650px) {
   .site {
     padding: 30px 20px 50px;
   }
 
-  .site-header {
+  .site-header h1,
+  .page-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .profile {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .site-header h1 {
-    font-size: 1.9rem;
+  .profile-text {
+    max-width: none;
   }
 
   .headshot {
     width: 155px;
-  }
-
-  .intro {
-    max-width: none;
   }
 }
