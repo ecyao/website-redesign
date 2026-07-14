@@ -1,7 +1,7 @@
 :root {
   --text: #222;
   --muted: #666;
-  --link: #174ea6;
+  --link: #0341fc;
   --line: #dddddd;
   --background: #ffffff;
 }
@@ -83,7 +83,7 @@ a:focus {
 /* Headings */
 
 h2 {
-  margin: 52px 0 24px;
+  margin: 24px 0 18px;
   padding-bottom: 7px;
   border-bottom: 1px solid var(--line);
   font-size: 1.45rem;
